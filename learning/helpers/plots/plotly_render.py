@@ -1,4 +1,5 @@
-
+import plotly
+from plotly import graph_objs as go
 
 def render(fig, width=500, height=500):
     
@@ -15,3 +16,6 @@ def render(fig, width=500, height=500):
     fig["layout"]["paper_bgcolor"] = "#22252B"  
     
     return fig
+
+def scatter( x, y, name, mode='lines', opacity=0.5, color=None):
+    return go.Scatter(x=x, y=y, mode =mode, opacity = 0.5, name = name, marker=dict( size=3, color=color ))
