@@ -1,9 +1,13 @@
 import plotly
 from plotly import graph_objs as go
 
-def render(fig, title, width=500, height=500):
+def render(fig, title, width=500, height=500, x_axis_title=None, y_axis_title=None):
     
     fig["layout"]["title"] = title
+    fig["layout"]["xaxis_title"] = x_axis_title
+    fig["layout"]["yaxis_title"] = y_axis_title
+    fig["layout"]["xaxis_title_font_color"] = '#ffffff'
+    fig["layout"]["yaxis_title_font_color"] = '#ffffff'
     fig["layout"]["width"] = width
     fig["layout"]["height"] = height
     
