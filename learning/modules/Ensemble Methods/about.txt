@@ -1,0 +1,32 @@
+The goal of ensemble methods is to combine the predictions of several base estimators built with a given learning 
+algorithm in order to improve generalizability / robustness over a single estimator.
+
+Two families of ensemble methods are usually distinguished:
+
+In averaging methods, the driving principle is to build several estimators independently and then to average 
+their predictions. On average, the combined estimator is usually better than any of the single base estimator because its variance is reduced.
+
+Examples: Bagging methods, Forests of randomized trees, …
+
+By contrast, in boosting methods, base estimators are built sequentially and one tries to reduce the bias of the combined estimator. The motivation is to combine several weak models to produce a powerful ensemble.
+
+Most ensemble methods use a single base learning algorithm to produce homogeneous base learners, i.e. learners of the same type, leading to homogeneous ensembles
+
+
+Bagging
+-------
+Bagging stands for bootstrap aggregation. 
+One way to reduce the variance of an estimate is to average together multiple estimates. 
+For example, we can train M different trees on different subsets of the data (chosen randomly with replacement) and compute the ensemble:
+
+Boosting
+--------
+Boosting refers to a family of algorithms that are able to convert weak learners to strong learners. 
+The main principle of boosting is to fit a sequence of weak learners− models that are only slightly better than random 
+guessing, such as small decision trees− to weighted versions of the data. More weight is given to examples that 
+were misclassified by earlier rounds.
+
+Stacking
+--------
+Stacking is an ensemble learning technique that combines multiple classification or regression models via a meta-classifier or a meta-regressor. 
+The base level models are trained based on a complete training set, then the meta-model is trained on the outputs of the base level model as features.
