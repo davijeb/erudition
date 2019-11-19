@@ -25,6 +25,24 @@ def render(fig, title, width=500, height=500, x_axis_title=None, y_axis_title=No
     
     fig.show()
 
+def render_with_shape(fig, dims, title, width=500, height=500, x_axis_title=None, y_axis_title=None, color='white', shape_width=1):
+
+    for dim in dims:
+        fig.add_shape(
+            go.layout.Shape(
+                type="line",
+                x0=dim[0],
+                y0=dim[1],
+                x1=dim[2],
+                y1=dim[3],
+                    line=dict(
+                    color=color,
+                    width=shape_width
+                )
+            )
+        )  
+    render(fig, title, width, height, x_axis_title, y_axis_title)
+
 def scatter( x, y, name, mode='lines', opacity=0.5, color=None, size=3):
     return go.Scatter(x=x, y=y, mode =mode, opacity = opacity, name = name, marker=dict( size=size, color=color ))
 
