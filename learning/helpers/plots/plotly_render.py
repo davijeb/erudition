@@ -1,7 +1,7 @@
 import plotly
 from plotly import graph_objs as go
 
-def render(fig, title, width=500, height=500, x_axis_title=None, y_axis_title=None):
+def render(fig, title, width=500, height=500, x_axis_title=None, y_axis_title=None, showlegend = True):
     
     fig["layout"]["title"] = title
     fig["layout"]["xaxis_title"] = x_axis_title
@@ -22,6 +22,9 @@ def render(fig, title, width=500, height=500, x_axis_title=None, y_axis_title=No
     fig["layout"]["legend"]["font"]["color"] = "#ffffff"
     fig["layout"]["plot_bgcolor"] = "#292C34"
     fig["layout"]["paper_bgcolor"] = "#22252B"
+    fig["layout"]["barmode"] = "stack"
+    
+    fig["layout"]["showlegend"] = showlegend
     
     fig.show()
 
@@ -57,3 +60,20 @@ def shape(x,y, type='circle', line_color='LightSeaGreen', size=0.1):
         y1=y+size,
         line_color="LightSeaGreen"
     )
+
+def shape_rect(x0, x1, y0, y1, line_color = 'RoyalBlue', line_width=2, fill_color='LightSkyBlue'):
+    return go.layout.Shape(
+        type="rect",
+        x0=x0,
+        y0=y0,
+        x1=x1,
+        y1=y1,
+        line=dict(
+            color=line_color,
+            width=line_width,
+        ),
+        #fillcolor=fill_color
+    )
+
+def bar(x, y, name, orientation='h'):
+    return go.Bar(x=x, y=y, name=name, orientation='h')
