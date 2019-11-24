@@ -22,7 +22,7 @@ def render(fig, title, width=500, height=500, x_axis_title=None, y_axis_title=No
     fig["layout"]["legend"]["font"]["color"] = "#ffffff"
     fig["layout"]["plot_bgcolor"] = "#292C34"
     fig["layout"]["paper_bgcolor"] = "#22252B"
-    fig["layout"]["barmode"] = "stack"
+    #fig["layout"]["barmode"] = "stack"
     
     fig["layout"]["showlegend"] = showlegend
     
