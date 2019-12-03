@@ -1,0 +1,12 @@
+
+learning/modules/GeneralizedLinearModels/helper/__pycache__/
+
+*.pyc
+
+learning/modules/sklearn/Support Vector Machines/.ipynb_checkpoints/
+
+learning/modules/sklearn/GeneralizedLinearModels/.ipynb_checkpoints/
+
+learning/modules/linear_algebra/.ipynb_checkpoints/
+
+.vscode/
