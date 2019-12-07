@@ -5,8 +5,10 @@ learning/modules/GeneralizedLinearModels/helper/__pycache__/
 
 learning/modules/sklearn/Support Vector Machines/.ipynb_checkpoints/
 
-learning/modules/sklearn/GeneralizedLinearModels/.ipynb_checkpoints/
+*.ipynb_checkpoints/
 
 learning/modules/linear_algebra/.ipynb_checkpoints/
 
 .vscode/
+
+data/regression/halloween_candy/.~lock.candy-data.csv#

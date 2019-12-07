@@ -22,8 +22,11 @@ def regression(df, power, linreg, plot_name=''):
 
     return plot, ret
 
-def data_sin_wave():
+def data_sin_wave(noisy=True):
     x = np.array([i*np.pi/180 for i in range(30,300,4)])
-    y = np.sin(x) + np.random.normal(0,0.15,len(x))
-
+    if noisy:
+        y= np.sin(x) + np.random.normal(0,0.15,len(x))
+    else:
+        y = np.sin(x)
+        
     return pd.DataFrame(np.column_stack([x,y]),columns=['x','y'])
