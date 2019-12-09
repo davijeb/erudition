@@ -1,0 +1,22 @@
+Context
+Fraud detection in financial transactions is one of the most important problems in financial companies.
+We have already had a competition on fraud detection at the 5th 1056Lab Data Analytics Competition which is the first our competition at Kaggle in 2018.
+
+Content
+The original dataset is in Kaggle Datasets.
+
+This data is about fraud detection in credit card transactions. The data was made by credit cards in September 2013 by European cardholders. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
+
+It contains only numerical input variables which are the result of a PCA transformation. The original features and more background information about the data is not provided.
+
+The dataset contains 284,807 instances, 492 instances are fraudulent, the remaining 284,315 instances are genuine.
+
+Training Dat and Test Data
+The training data set is the former 198,365 (70%) instances, 383 represents fraud transactions, 197,982 transactions are genuine.
+
+ID,Class
+198366,1
+198367,1
+198368,1
+etc.
+The test data is the later 86,442 (30%) transactions.
