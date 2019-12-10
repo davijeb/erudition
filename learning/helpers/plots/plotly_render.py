@@ -46,7 +46,7 @@ def render_with_shape(fig, dims, title, width=500, height=500, x_axis_title=None
         )  
     render(fig, title, width, height, x_axis_title, y_axis_title)
 
-def scatter( x, y, name, mode='lines', opacity=0.5, color=None, size=3):
+def scatter( x, y, name, mode='lines', opacity=0.5, color='yellow', size=3):
     return go.Scatter(x=x, y=y, mode =mode, opacity = opacity, name = name, marker=dict( size=size, color=color ))
 
 def shape(x,y, type='circle', line_color='LightSeaGreen', size=0.1):
