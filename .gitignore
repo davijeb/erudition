@@ -1,2 +1,4 @@
 *.pyc
 .ipynb_checkpoints
+
+data/regression/halloween_candy/
